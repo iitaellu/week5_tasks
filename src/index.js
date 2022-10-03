@@ -18,7 +18,7 @@ const initMap = (data) => {
   });
 
   let geoJson = L.geoJSON(data, {
-    weight: 2,
+    //weight: 2,
     onEachFeature: getFeature
   }).addTo(map);
 
@@ -32,8 +32,8 @@ const initMap = (data) => {
 
 const getFeature = (feature, layer) => {
   if (!feature.id) return;
-  const id = feature.properties.id;
-  console.log(id);
+  //const id = feature.properties.id;
+  //console.log(id);
 
   layer.bindTooltip(feature.properties.name);
 };
